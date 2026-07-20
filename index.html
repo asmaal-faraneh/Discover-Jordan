@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اكتشف الأردن | Jordan Discover</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@500;600;700&display=swap');
+        html {
+    scroll-behavior: smooth;
+}
+        body { font-family: 'Cairo', sans-serif; }
+        .title-font { font-family: 'Amiri', serif; }
+    
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('Discover Jordan/hero.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .nav-link:hover { color: #b45309; transform: translateY(-2px); }
+        .card-hover:hover { transform: translateY(-15px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+        .section { display: none; }
+        .section.active { display: block; }
+        .detail-card:hover { transform: scale(1.03); }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <h1 class="title-font text-3xl font-bold text-amber-900">اكتشف الأردن</h1>
+            </div>
+            <div class="hidden md:flex gap-9 text-lg font-medium">
+                <a href="#home" class="nav-link">الرئيسية</a>
+                <a href="#about" class="nav-link">عن الأردن</a>
+                <a href="#why" class="nav-link">ليش الأردن؟</a>
+                <a href="#contact" class="nav-link">اتصل بنا</a>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="hero h-screen flex items-center text-white pt-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="title-font text-6xl md:text-7xl font-bold mb-6">أرض التاريخ والسلام والجمال</h2>
+            <p class="text-2xl mb-10">اكتشف عجائب الأردن: البتراء، البحر الميت، المزارات الدينية والطبيعة الساحرة</p>
+            <a href="#why" class="inline-block bg-white text-amber-900 px-12 py-5 rounded-3xl text-xl font-semibold">ابدأ رحلتك الآن</a>
+        </div>
+    </section>
+   </section>
+   </section>
+     </section>
+    <!-- قسم "عن الأردن" الرئيسي -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="title-font text-5xl font-bold text-amber-900 mb-8">عن الأردن</h2>
+                    <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                        الأردن بلد السلام والضيافة. أرض تمتد فيها الجبال والوديان والصحارى، وتجتمع فيها حضارات عمرها آلاف السنين. هنا تلتقي الجبال بالصحراء، وتروي الحجارة قصص حضاراتٍ عبرت آلاف السنين.
+                        من مدينة البتراء الوردية المنحوتة في الصخر، إلى سكون وادي رم الذي يشبه كوكبًا آخر، يحمل الأردن روحًا تجمع بين التاريخ، والجمال, والدفء الإنساني.
+                        <br><br>
+                        الأردن ليس مجرد وجهة سياحية، بل تجربة مليئة بالضيافة والسلام والتنوع.
+                        في شماله غاباتٌ وتلال، وفي جنوبه صحارى ساحرة، وبينهما مدن نابضة بالحياة وأسواق تعبق برائحة القهوة والتراث.
+                        <br><br>
+                        هنا… يشعر الزائر أنه بين أهله، مهما كانت لغته أو بلده.
+                    </p>
+                    
+                    <!-- كبسة العرض: أضفنا لها id="show-btn" لتتحكم بها كبسة الإغلاق لاحقاً -->
+                    <button id="show-btn" onclick="document.getElementById('history-section').classList.remove('hidden'); window.scrollTo({top: document.getElementById('history-section').offsetTop, behavior: 'smooth'}); this.style.display='none';" 
+                            class="inline-block bg-amber-900 hover:bg-amber-800 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+                        انقر للمزيد عن تاريخ المملكة والملوك
+                    </button>
+                </div>
+                <img src="Discover Jordan/about.jpg" class="rounded-3xl shadow-2xl" alt="الأردن - الحرس الملكي">
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم التاريخي المدمج (يبدأ مخفي تماما بسبب وجود كلاس hidden) -->
+    <div id="history-section" class="hidden border-t border-stone-200 bg-stone-50 transition-all duration-5xl">
+        
+        <!-- عنوان القسم التاريخي -->
+        <div class="py-12 bg-amber-900 text-white text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="title-font text-4xl font-bold mb-2">تاريخ المملكة الأردنية الهاشمية</h2>
+                <p class="text-lg text-amber-100 font-light">رحلة عبر الزمن من فجر التاريخ إلى العهد الحديث</p>
+            </div>
+        </div>
+
+        <!-- الخط الزمني للتاريخ (Timeline) -->
+        <div class="py-16 max-w-5xl mx-auto px-6">
+            <div class="relative border-r-2 border-amber-800/30 mr-4 md:mr-8 space-y-12">
+                
+                <!-- العصر الأول -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-[11px] top-1 bg-amber-900 w-5 h-5 rounded-full border-4 border-stone-50"></div>
+                    <span class="text-amber-900 font-bold text-sm bg-amber-100 px-3 py-1 rounded-full">منذ بدء التاريخ</span>
+                    <h3 class="text-2xl font-bold mt-2 text-stone-900 title-font">فجر الحضارات القديمة</h3>
+                    <p class="text-lg text-gray-700 mt-2 leading-relaxed">
+                        يعتبر الأردن مهداً لأقدم الحضارات البشرية، حيث استوطنه الإنسان منذ العصر الحجري الحديث (مثل آثار عين غزال في عمان). تعاقبت على أرضه ممالك عظيمة كالأدوميين، والمؤابيين، والعمونيين.
+                    </p>
+                </div>
+
+                <!-- العصر الثاني -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-[11px] top-1 bg-amber-900 w-5 h-5 rounded-full border-4 border-stone-50"></div>
+                    <span class="text-amber-900 font-bold text-sm bg-amber-100 px-3 py-1 rounded-full">القرن السادس قبل الميلاد</span>
+                    <h3 class="text-2xl font-bold mt-2 text-stone-900 title-font">الأنباط والمدينة الوردية</h3>
+                    <p class="text-lg text-gray-700 mt-2 leading-relaxed">
+                        سطّر الأنباط العرب معجزة هندسية فريدة بنحت عاصمتهم "البتراء" في الصخر لتصبح مركزاً تجارياً عالمياً يربط الشرق بالغرب وعاصمة لقوافل التجارة، واليوم تصنف كإحدى عجائب الدنيا السبع الجديدة.
+                    </p>
+                </div>
+
+                <!-- العصر الثالث -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-[11px] top-1 bg-amber-900 w-5 h-5 rounded-full border-4 border-stone-50"></div>
+                    <span class="text-amber-900 font-bold text-sm bg-amber-100 px-3 py-1 rounded-full">العهود الإسلامية</span>
+                    <h3 class="text-2xl font-bold mt-2 text-stone-900 title-font">الأردن في التاريخ الإسلامي</h3>
+                    <p class="text-lg text-gray-700 mt-2 leading-relaxed">
+                        شهد الأردن معارك إسلامية فاصلة غيّرت مجرى التاريخ مثل معركتي مؤتة واليرموك. وتزينت صحراؤه بالقصور الأموية الرائعة (كقصر عمرة والمشتى)، بالإضافة إلى القلاع الاستراتيجية مثل قلعة عجلون والكرك.
+                    </p>
+                </div>
+
+                <!-- العصر الرابع -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-[11px] top-1 bg-amber-900 w-5 h-5 rounded-full border-4 border-stone-50"></div>
+                    <span class="text-amber-900 font-bold text-sm bg-amber-100 px-3 py-1 rounded-full">عام 1921 - 1946</span>
+                    <h3 class="text-2xl font-bold mt-2 text-stone-900 title-font">تأسيس الدولة والاستقلال</h3>
+                    <p class="text-lg text-gray-700 mt-2 leading-relaxed">
+                        بدأ التاريخ الحديث للأردن عقب الثورة العربية الكبرى (1916). وفي عام 1921 أسس الأمير عبد الله الأول بن الحسين إمارة شرق الأردن، وتلا ذلك رحلة كفاح وبناء أثمرت عن الاستقلال التام عام 1946 وإعلان قيام المملكة الأردنية الهاشمية.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- قسم بطاقات ملوك بني هاشم -->
+        <div class="py-16 bg-stone-100 border-t border-stone-200">
+            <div class="max-w-6xl mx-auto px-6">
+                <h3 class="title-font text-3xl font-bold text-center text-amber-900 mb-12">قادة المسيرة والنهضة الهاشمية</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- الملك الأول -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200">
+                        <div class="w-10 h-10 bg-amber-900/10 rounded-xl flex items-center justify-center text-amber-900 font-bold mb-3">١</div>
+                        <h4 class="text-lg font-bold text-stone-900 mb-1">الملك عبد الله الأول</h4>
+                        <p class="text-xs text-amber-800 font-semibold mb-2">الملك المؤسس</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">واضع حجر الأساس للدولة الأردنية الحديثة وباني ركائزها الدستورية الأولى.</p>
+                    </div>
+
+                    <!-- الملك الثاني -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200">
+                        <div class="w-10 h-10 bg-amber-900/10 rounded-xl flex items-center justify-center text-amber-900 font-bold mb-3">٢</div>
+                        <h4 class="text-lg font-bold text-stone-900 mb-1">الملك طلال بن عبد الله</h4>
+                        <p class="text-xs text-amber-800 font-semibold mb-2">واضع الدستور</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">صاحب الرؤية التشريعية الحكيمة التي منحت الأردن دستوراً حديثاً ومتطوراً يحمي الحقوق.</p>
+                    </div>
+
+                    <!-- الملك الثالث -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200">
+                        <div class="w-10 h-10 bg-amber-900/10 rounded-xl flex items-center justify-center text-amber-900 font-bold mb-3">٣</div>
+                        <h4 class="text-lg font-bold text-stone-900 mb-1">الملك الحسين بن طلال</h4>
+                        <p class="text-xs text-amber-800 font-semibold mb-2">الملك الباني</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">قاد مسيرة البناء والتنمية الشاملة وجعل من الأردن منارة في التعليم والصحة والعمران.</p>
+                    </div>
+
+                    <!-- الملك الرابع -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200">
+                        <div class="w-10 h-10 bg-amber-900/10 rounded-xl flex items-center justify-center text-amber-900 font-bold mb-3">٤</div>
+                        <h4 class="text-lg font-bold text-stone-900 mb-1">الملك عبد الله الثاني</h4>
+                        <p class="text-xs text-amber-800 font-semibold mb-2">الملك المعزز (العهد الحالي)</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">يقود الأردن بحكمة نحو الحداثة، التحول الرقمي، تمكين الشباب، وصون أمن واستقرار الوطن.</p>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- الكبسة الجديدة المضافة للإغلاق والرفع للأعلى بسلاسة -->
+            <div class="text-center pt-12 pb-4">
+                <button onclick="document.getElementById('history-section').classList.add('hidden'); document.getElementById('show-btn').style.display='inline-block'; window.scrollTo({top: document.getElementById('about').offsetTop, behavior: 'smooth'});" 
+                        class="bg-amber-900 hover:bg-amber-800 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+                    إغلاق قسم التاريخ
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="why" class="py-24 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="title-font text-5xl font-bold text-center text-amber-900 mb-4">ليش جاي على الأردن؟</h2>
+            <p class="text-center text-xl mb-16">اختر نوع السياحة اللي تناسبك</p>
+        
+            <div class="grid md:grid-cols-3 gap-8">
+                <div onclick="showCategory(1)" class="card-hover bg-white rounded-3xl overflow-hidden shadow-xl cursor-pointer">
+                 <img src="Discover Jordan/religious-category.jpg" class="w-full h-72 object-cover">
+                    <div class="p-8 text-center"><h3 class="text-3xl font-bold">سياحة دينية </h3></div>
+                </div>
+                <div onclick="showCategory(2)" class="card-hover bg-white rounded-3xl overflow-hidden shadow-xl cursor-pointer">
+                            <img src="Discover Jordan/cultural-category.jpg" class="w-full h-72 object-cover">
+                    <div class="p-8 text-center"><h3 class="text-3xl font-bold">سياحة ثقافية </h3></div>
+                </div>
+                <div onclick="showCategory(3)" class="card-hover bg-white rounded-3xl overflow-hidden shadow-xl cursor-pointer">
+<img src="Discover Jordan/therapeutic-category.jpeg" class="w-full h-72 object-cover">
+                    <div class="p-8 text-center"><h3 class="text-3xl font-bold">سياحة علاجية </h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="religious" class="section py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <button onclick="backToWhy()" class="mb-8 text-2xl text-amber-700 hover:text-amber-900 flex items-center gap-2">← العودة</button>
+        
+            <h2 class="title-font text-5xl font-bold text-amber-900 mb-8 text-center"> السياحة الدينية في الأردن</h2>
+            <p class="text-xl text-center max-w-4xl mx-auto mb-16">يُعد الأردن من أهم الوجهات الدينية في المنطقة، لما يحتويه من مواقع مرتبطة بالأنبياء والصحابة والأحداث الدينية التاريخية، إضافةً إلى الأماكن المقدسة لدى المسلمين والمسيحيين.</p>
+            <div class="detail-card bg-stone-50 p-10 rounded-3xl mb-16">
+       <img src="Discover Jordan/cave-ahlelkahf.jpg" class="w-full h-96 object-cover rounded-3xl mb-8" alt="كهف أهل الكهف">
+                <h3 class="text-3xl font-bold mb-4"> كهف أهل الكهف (أصحاب الكهف)</h3>
+                <p class="text-lg leading-relaxed">يقع شرق العاصمة عمّان في منطقة الرجيب، ويُعرف محليًا باسم “رقيم الرجيب”.</p>
+                <p class="text-lg leading-relaxed">يُعتقد أن هذا الكهف هو المكان المذكور في سورة الكهف في القرآن الكريم.</p>
+                <p class="font-bold text-amber-700 mt-6">سعر التذكرة: مجاني / تبرع</p>
+                                                            <!-- كبسة الانتقال المباشر إلى موقع كهف أهل الكهف على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D9%83%D9%87%D9%81+%D8%A3%D8%B5%D8%AD%D8%A7%D8%A8+%D8%A7%D9%84%D9%83%D9%87%D9%81+-+%D8%A7%D9%84%D8%B1%D9%82%D9%8A%D9%85%E2%80%AD/@31.8989142,35.9782941,17z/data=!4m10!1m2!2m1!1z2YPZh9mBINij2YfZhCDYp9mE2YPZh9mBINin2YTYo9ix2K_Zhg!3m6!1s0x151b5f887595ae97:0xc13f87eeb248847b!8m2!3d31.8989142!4d35.973788!15sCiXZg9mH2YEg2KPZh9mEINin2YTZg9mH2YEg2KfZhNij2LHYr9mGkgESdG91cmlzdF9hdHRyYWN0aW9u4AEA!16s%2Fg%2F122sg2l8?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع كهف أهل الكهف على الخريطة
+</a>
+
+            </div>
+            <div class="detail-card bg-stone-50 p-10 rounded-3xl mb-16">
+                <h3 class="text-3xl font-bold mb-8"> مقامات الصحابة في المزار الجنوبي</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+           <img src="Discover Jordan/jaafar.jpeg" class="w-full h-64 object-cover rounded-2xl mb-4" alt="جعفر بن أبي طالب">
+                        <strong>مقام جعفر بن أبي طالب</strong>
+                        <p class="text-sm mt-2">أحد قادة معركة مؤتة • ابن عم الرسول ﷺ • لُقب بـ “الطيار” و”ذو الجناحين”</p>
+                                                                    <!-- كبسة الانتقال المباشر إلى موقع مقام جعفر بن أبي طالب على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D9%85%D9%82%D8%A7%D9%85+%D9%88+%D8%B6%D8%B1%D9%8A%D8%AD+%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D9%8A+%D8%A7%D9%84%D8%AC%D9%84%D9%8A%D9%84+%D8%AC%D8%B9%D9%81%D8%B1+%D8%A8%D9%86+%D8%A3%D8%A8%D9%8A+%D8%B7%D8%A7%D9%84%D8%A8+%D8%B1%D8%B6%D9%8A+%D8%A7%D9%84%D9%84%D9%91%D9%B0%D9%87+%D8%B9%D9%86%D9%87%E2%80%AD/@31.0664358,35.698089,17z/data=!4m10!1m2!2m1!1z2YXZgtin2YUg2KzYudmB2LEg2KjZhiDYo9io2Yog2LfYp9mE2Kg!3m6!1s0x15039daa92d4df8d:0x5e60ae39a148b760!8m2!3d31.0661002!4d35.6955098!15sCibZhdmC2KfZhSDYrNi52YHYsSDYqNmGINij2KjZiiDYt9in2YTYqJIBCGNlbWV0ZXJ54AEA!16s%2Fg%2F11b5v9pq02?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع مقام جعفر بن أبي طالب على الخريطة
+</a>
+                    </div>
+                    <div class="text-center">
+           <img src="Discover Jordan/zayed.jpg" class="w-full h-64 object-cover rounded-2xl mb-4" alt="زيد بن حارثة">
+                        <strong>مقام زيد بن حارثة</strong>
+                        <p class="text-sm mt-2">القائد الأول للمعركة • مولى الرسول ﷺ</p>
+                                                                    <!-- كبسة الانتقال المباشر إلى موقع مقام زيد بن حارثة على خرائط جوجل -->
+                 <br> <br> <br>
+<a href="https://www.google.com/maps/place/%D8%B6%D8%B1%D9%8A%D8%AD+%D8%B2%D9%8A%D8%AF+%D8%A8%D9%86+%D8%AD%D8%A7%D8%B1%D8%AB%D8%A9%E2%80%AD/@31.0659985,35.6986402,17z/data=!3m1!4b1!4m6!3m5!1s0x15039d005f18aeb9:0x5058cdb3f0b8d43a!8m2!3d31.0659939!4d35.6960706!16s%2Fg%2F11b5v6dwwb?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع مقام زيد بن حارثة على الخريطة
+</a>
+                    </div>
+                    <div class="text-center">
+         <img src="Discover Jordan/abdullah.jpg" class="w-full h-64 object-cover rounded-2xl mb-4" alt="عبدالله بن رواحة">
+                        <strong>مقام عبدالله بن رواحة</strong>
+                        <p class="text-sm mt-2">شاعر الرسول ﷺ • من كبار الصحابة الذين استشهدوا في المعركة</p>
+                                                                    <!-- كبسة الانتقال المباشر إلى موقع مقام عبدالله بن رواحة على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D9%85%D9%82%D8%A7%D9%85+%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D9%8A+%D8%A7%D9%84%D8%AC%D9%84%D9%8A%D9%84+%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87+%D8%A8%D9%86+%D8%B1%D9%88%D8%A7%D8%AD%D8%A9%E2%80%AD/@31.0663759,35.7016239,17z/data=!3m1!4b1!4m6!3m5!1s0x15039d002b4d2483:0x96e61f4fc8c7b592!8m2!3d31.0663713!4d35.6990543!16s%2Fg%2F11vk9d69y1?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع مقام عبدالله بن رواحة على الخريطة
+</a>
+                    </div>
+                </div>
+                <p class="font-bold text-amber-700 mt-4 text-center">سعر الدخول: مجاني</p>
+            </div>
+            <div class="detail-card bg-stone-50 p-10 rounded-3xl mb-16">
+         <img src="Discover Jordan/haroun.png" class="w-full h-96 object-cover rounded-3xl mb-8" alt="مقام هارون">
+                <h3 class="text-3xl font-bold mb-4"> مقام النبي هارون </h3>
+                <p class="text-lg leading-relaxed">يقع على قمة جبل هارون جنوب مدينة البتراء، على ارتفاع يقارب 1350 مترًا.</p>
+                <p class="text-lg leading-relaxed">بُني في العصر المملوكي. إطلالة بانورامية مذهلة على جبال البتراء.</p>
+                <p class="font-bold text-amber-700 mt-6">سعر الدخول: ضمن تذكرة البتراء</p>
+                                                            <!-- كبسة الانتقال المباشر إلى موقع مقام النبي هارون على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D9%85%D9%82%D8%A7%D9%85+%D8%A7%D9%84%D9%86%D8%A8%D9%8A+%D9%87%D8%A7%D8%B1%D9%88%D9%86+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%E2%80%AD/@30.3170432,35.4090851,17z/data=!3m1!4b1!4m6!3m5!1s0x15016e0979667d99:0x1e772ea247cdc050!8m2!3d30.3170386!4d35.4065155!16s%2Fm%2F04dzrbc?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع مقام النبي هارون  على الخريطة
+</a>
+            </div>
+            <div class="detail-card bg-stone-50 p-10 rounded-3xl mb-16">
+             <img src="Discover Jordan/shaaleb.jpg" class="w-full h-96 object-cover rounded-3xl mb-8" alt="مقام شعيب">
+                <h3 class="text-3xl font-bold mb-4"> مقام النبي شعيب </h3>
+                <p class="text-lg leading-relaxed">يقع قرب مدينة السلط غرب الأردن، في منطقة جبلية مطلة على الطبيعة.</p>
+                <p class="font-bold text-amber-700 mt-6">يُزار بكثرة في المناسبات الدينية</p>
+                                                            <!-- كبسة الانتقال المباشر إلى موقع مقام النبي شعيب على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D9%85%D9%82%D8%A7%D9%85+%D8%A7%D9%84%D9%86%D8%A8%D9%8A+%D8%B4%D8%B9%D9%8A%D8%A8+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%E2%80%AD/@31.960192,35.7186477,17z/data=!3m1!4b1!4m6!3m5!1s0x151cbb69aba9d0ab:0xca7bc0be2c65ef9b!8m2!3d31.9601875!4d35.7160781!16s%2Fg%2F11btwtpl46?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع مقام النبي شعيب على الخريطة
+</a>
+            </div>
+            <div class="detail-card bg-stone-50 p-10 rounded-3xl">
+           <img src="Discover Jordan/maghtas.jpeg" class="w-full h-96 object-cover rounded-3xl mb-8" alt="المغطس">
+                <h3 class="text-3xl font-bold mb-4"> نهر الأردن – المغطس</h3>
+                <p class="text-lg leading-relaxed">مكان معمودية السيد المسيح عليه السلام. موقع تراث عالمي لليونسكو.</p>
+                <p class="font-bold text-amber-700 mt-6">سعر الدخول: 10-20 دينار</p>
+                                                            <!-- كبسة الانتقال المباشر إلى موقع المغطس على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D9%85%D9%88%D9%82%D8%B9+%D9%85%D8%B9%D9%85%D9%88%D8%AF%D9%8A%D8%A9+%D8%A7%D9%84%D9%85%D8%B3%D9%8A%D8%AD%E2%80%AD/@32.2465301,35.8875511,10z/data=!4m10!1m2!2m1!1z4pyd77iPINmG2YfYsSDYp9mE2KPYsdiv2YYg4oCTINin2YTZhdi62LfYsw!3m6!1s0x151cca65ee2174fb:0x4e1d67105b9da51b!8m2!3d31.8372183!4d35.5503094!15sCivinJ3vuI8g2YbZh9ixINin2YTYo9ix2K_ZhiDigJMg2KfZhNmF2LrYt9izWiYiJOKcnSDZhtmH2LEg2KfZhNij2LHYr9mGINin2YTZhdi62LfYs5IBE2hpc3RvcmljYWxfbGFuZG1hcmuaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjB4VUZKdFJrSlhXR2MwV0RGT1NsZFdaRVJhU0VKS1kxVktZV0ZWUlJBQuABAPoBBAgAEEU!16s%2Fg%2F1216f43n?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع  نهر الأردن – المغطس على الخريطة
+</a>
+            </div>
+        </div>
+    </section>
+    <section id="cultural" class="section py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <button onclick="backToWhy()" class="mb-8 text-2xl text-amber-700 hover:text-amber-900 flex items-center gap-2">← العودة</button>
+            <h2 class="title-font text-5xl font-bold text-amber-900 mb-8 text-center"> السياحة الثقافية في الأردن</h2>
+            <p class="text-xl text-center max-w-4xl mx-auto mb-16">يتميز الأردن بتنوعه الثقافي والحضاري، حيث تعاقبت عليه حضارات عديدة مثل الأنباط والرومان...</p>
+            <div class="detail-card bg-stone-50 p-10 rounded-3xl mb-16">
+           <img src="Discover Jordan/petra.jpg" class="w-full h-96 object-cover rounded-3xl mb-8" alt="البتراء">
+                <h3 class="text-3xl font-bold mb-4"> مدينة البتراء</h3>
+                <p class="text-lg leading-relaxed">تُعد البتراء من أشهر المواقع الأثرية في العالم، العاصمة القديمة للأنباط.</p>
+                <ul class="list-disc pr-8 mt-6 space-y-2 text-lg">
+                    <li>الخزنة • الدير • السيق • المدرج النبطي</li>
+                </ul>
+                <p class="font-bold text-amber-700 mt-6">إحدى عجائب الدنيا السبع • تراث عالمي لليونسكو</p>
+                <!-- كبسة الانتقال المباشر إلى موقع البتراء على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/search/Petra%20Jordan" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع البتراء على الخريطة
+</a>
+            </div>
+            
+            <div class="detail-card bg-stone-50 p-10 rounded-3xl mb-16">
+                <img src="Discover Jordan/jerash.jpeg" class="w-full h-96 object-cover rounded-3xl mb-8" alt="جرش">
+                <h3 class="text-3xl font-bold mb-4"> جرش الأثرية</h3>
+                <p class="text-lg leading-relaxed">من أفضل المدن الرومانية المحفوظة في العالم.</p>
+                <p class="font-bold text-amber-700 mt-6">تستضيف مهرجان جرش الثقافي سنوياً</p>
+                                <!-- كبسة الانتقال المباشر إلى موقع جرش الأثرية على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D9%85%D9%88%D9%82%D8%B9+%D8%AC%D8%B1%D8%B4%E2%80%AD/@32.281263,35.8940942,17z/data=!3m1!4b1!4m6!3m5!1s0x151c8048588ecc75:0xc3bc8fe9ac19669e!8m2!3d32.2812585!4d35.8915246!16s%2Fg%2F1hc3jphgx?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع جرش الأثرية على الخريطة
+</a>
+
+            </div>
+            <div class="detail-card bg-stone-50 p-10 rounded-3xl mb-16">
+    <img src="Discover Jordan/wadiram.jpg" class="w-full h-96 object-cover rounded-3xl mb-8" alt="وادي رم">
+    <h3 class="text-3xl font-bold mb-4"> وادي رم</h3>
+    <p class="text-lg leading-relaxed">منطقة صحراوية ساحرة تُعرف بـ"وادي القمر".</p>
+    
+    <p class="font-bold text-amber-700 mt-6">موقع تصوير لأشهر أفلام هوليوود العالمية عن كوكب المريخ</p>
+                                    <!-- كبسة الانتقال المباشر إلى موقع وادي رم على خرائط جوجل -->
+    <br> <br>
+    <a href="https://www.google.com/maps/place/%D9%88%D8%A7%D8%AF%D9%8A+%D8%B1%D9%85%E2%80%AD/@29.5558766,35.4101704,17z/data=!3m1!4b1!4m6!3m5!1s0x150093a5d3b537b3:0xe9885592958b5d07!8m2!3d29.555872!4d35.4076008!16zL20vMDU3N3F4?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+       class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+        <i class="fas fa-map-marker-alt text-amber-400"></i>
+        انتقل إلى موقع وادي رم على الخريطة
+    </a>
+</div>
+            <div class="detail-card bg-stone-50 p-10 rounded-3xl mb-16">
+    <h3 class="text-3xl font-bold mb-8 text-right">القلاع التاريخية في الأردن</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+        
+        <div class="flex flex-col items-center justify-between bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+            <div class="w-full">
+                <img src="Discover Jordan/ajloun-castle.jpeg" class="w-full h-80 object-cover rounded-xl mb-4" alt="قلعة عجلون">
+                <strong class="text-xl block mb-2">قلعة عجلون</strong>
+                <p class="text-sm text-stone-600 mb-6">بناها القائد عز الدين أسامة أحد قادة صلاح الدين الأيوبي لتكون حصناً منيعاً ومراقبة لطرق التجارة.</p>
+            </div>
+                                                <!-- كبسة الانتقال المباشر إلى موقع قلعة عجلون على خرائط جوجل -->
+            <a href="https://www.google.com/maps/place/%D9%82%D9%84%D8%B9%D8%A9+%D8%B9%D8%AC%D9%84%D9%88%D9%86%E2%80%AD/@32.3252142,35.7300195,17z/data=!3m1!4b1!4m6!3m5!1s0x151c8888296393d7:0xad15bd4bdbfa4a2c!8m2!3d32.3252097!4d35.7274499!16zL20vMDhrZDN6?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+               class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer w-full justify-center mt-auto">
+                <i class="fas fa-map-marker-alt text-amber-400"></i>
+                انتقل إلى موقع قلعة عجلون على الخريطة
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center justify-between bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+            <div class="w-full">
+                <img src="Discover Jordan/karak-castle.jpg" class="w-full h-80 object-cover rounded-xl mb-4" alt="قلعة الكرك">
+                <strong class="text-xl block mb-2">قلعة الكرك</strong>
+                <p class="text-sm text-stone-600 mb-6">من أكبر وأهم قلاع الأردن التاريخية، تمتاز ببنائها المهيب وممراتها الحصينة الممتدة تحت الأرض.</p>
+            </div>
+                                                <!-- كبسة الانتقال المباشر إلى موقع قلعة الكرك على خرائط جوجل -->
+            <a href="https://www.google.com/maps/place/%D9%82%D9%84%D8%B9%D8%A9+%D8%A7%D9%84%D9%83%D8%B1%D9%83+%D8%A7%D9%84%D9%85%D9%85%D9%8A%D8%B2%D9%87%E2%80%AD/@31.1809605,35.7042316,17z/data=!3m1!4b1!4m6!3m5!1s0x150370cdc75ce587:0xf0168216330872ce!8m2!3d31.1809559!4d35.701662!16s%2Fm%2F0bx_l70?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+               class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer w-full justify-center mt-auto">
+                <i class="fas fa-map-marker-alt text-amber-400"></i>
+                انتقل إلى موقع قلعة الكرك على الخريطة
+            </a>
+        </div>
+    </div>
+    <p class="font-bold text-amber-700 mt-8 text-center">أسعار الدخول: خاضعة لرسوم وزارة السياحة / تذكرة موحدة</p>
+</div>
+<div class="detail-card bg-stone-50 p-10 rounded-3xl mb-16">
+    <h3 class="text-3xl font-bold mb-8 text-right">المتاحف الوطنية في الأردن</h3>
+    <!-- عرض المتاحف بشكل قسمين -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+        <!-- قسم متحف الأردن -->
+        <div class="flex flex-col items-center justify-between bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+            <div class="w-full">
+                <!-- صورة (كبيرة وواضحة ) h-80 -->
+                <img src="Discover Jordan/jordan-museum.jpg" class="w-full h-80 object-cover rounded-xl mb-4" alt="متحف الأردن">
+                <strong class="text-xl block mb-2">متحف الأردن</strong>
+                <p class="text-sm text-stone-600 mb-6">يعرض قصة تاريخ الأردن وحضارته العريقة من خلال قطع أثرية فريدة ومخطوطات نادرة تمتد من العصور الحجرية حتى يومنا هذا.</p>
+            </div>
+                                                <!-- كبسة الانتقال المباشر إلى موقع متحف الأردن على خرائط جوجل -->
+            <a href="https://www.google.com/maps/place/%D9%85%D8%AA%D8%AD%D9%81+%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86%E2%80%AD/@31.94577,35.9297673,17z/data=!3m1!4b1!4m6!3m5!1s0x151b5fe87d65da9d:0x80454ecf5fcc791c!8m2!3d31.9457655!4d35.9271977!16s%2Fg%2F1n3dw6s4k?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+               class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer w-full justify-center mt-auto">
+                <i class="fas fa-map-marker-alt text-amber-400"></i>
+                انتقل إلى موقع متحف الأردن على الخريطة
+            </a>
+        </div>
+
+        <!-- قسم المتحف الملكي للسيارات -->
+        <div class="flex flex-col items-center justify-between bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+            <div class="w-full">
+                                <!-- صورة (كبيرة وواضحة ) h-80 -->
+                <img src="Discover Jordan/royal-automobile-museum.jpg" class="w-full h-80 object-cover rounded-xl mb-4" alt="المتحف الملكي للسيارات">
+                <strong class="text-xl block mb-2">المتحف السيارات الملكي</strong>
+                <p class="text-sm text-stone-600 mb-6">يضم مجموعة نادرة وتاريخية من السيارات والدراجات الملكية التي توثق تاريخ المملكة الأردنية الهاشمية من عهد الملك عبد الله الأول حتى عهد الملك عبد الله الثاني.</p>
+            </div>
+                                                            <!-- كبسة الانتقال المباشر إلى موقع متحف السيارات الملكي على خرائط جوجل -->
+            <a href="https://www.google.com/maps/place/%D9%85%D8%AA%D8%AD%D9%81+%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D9%84%D9%83%D9%8A%E2%80%AD/@31.9829052,35.8289293,17z/data=!3m1!4b1!4m6!3m5!1s0x151ca229b2067e73:0xfbb235e88924929f!8m2!3d31.9829052!4d35.8263597!16s%2Fm%2F0k70llj?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+               class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer w-full justify-center mt-auto">
+                <i class="fas fa-map-marker-alt text-amber-400"></i>
+                انتقل إلى موقع المتحف السيارات الملكي على الخريطة
+            </a>
+        </div>
+
+    </div>
+    <p class="font-bold text-amber-700 mt-8 text-center">ملاحظة: تتوفر تذاكر الدخول عند بوابة كل متحف</p>
+</div>
+    </section>
+    <section id="therapeutic" class="section py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <button onclick="backToWhy()" class="mb-8 text-2xl text-amber-700 hover:text-amber-900 flex items-center gap-2">← العودة</button>
+            <h2 class="title-font text-5xl font-bold text-amber-900 mb-12 text-center"> السياحة العلاجية في الأردن</h2>
+            <div class="space-y-20">
+                <div class="detail-card grid md:grid-cols-2 gap-12 bg-stone-50 p-10 rounded-3xl">
+             <img src="Discover Jordan/deadsea.jpeg" class="rounded-3xl h-96 object-cover" alt="البحر الميت">
+                        <h3 class="text-3xl font-bold">البحر الميت</h3>
+                        <p class="text-lg mt-4">أشهر وجهة علاجية في الأردن والعالم، يشتهر بمياهه المالحة الغنية بالمعادن والطين العلاجي. يساعد في علاج الصدفية، آلام المفاصل، وبعض الأمراض الجلدية، إضافة إلى الاسترخاء والاستجمام.</p>
+                        <p class="font-bold text-amber-700 mt-6">سعر التذكرة: 15–50 دينار (عربي وأجنبي حسب المنتجع)</p>
+                                        <!-- كبسة الانتقال المباشر إلى موقع البحر الميت على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D8%A7%D9%84%D8%A8%D8%AD%D8%B1+%D8%A7%D9%84%D9%85%D9%8A%D8%AA%E2%80%AD/@31.5373672,35.6547546,11z/data=!3m1!4b1!4m6!3m5!1s0x15033c2eaf9fbba1:0xf38cff48a0c15882!8m2!3d31.5590287!4d35.4731895!16zL20vMDJjbnA?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع البحر الميت على الخريطة
+</a>
+                    </div>
+                </div>
+                <div class="detail-card grid md:grid-cols-2 gap-12 bg-stone-50 p-10 rounded-3xl">
+                  <img src="Discover Jordan/main.jpeg" class="rounded-3xl h-96 object-cover" alt="حمامات ماعين">
+                        <h3 class="text-3xl font-bold">حمامات ماعين</h3>
+                        <p class="text-lg mt-4">منطقة تحتوي على شلالات ومياه معدنية ساخنة بدرجات حرارة بين 30–37° مئوية. يقصدها الزوار للعلاج الطبيعي والاسترخاء، خاصة لآلام العضلات والإجهاد.</p>
+                        <p class="font-bold text-amber-700 mt-6">سعر التذكرة اليومية: 10–15 دينار</p>
+                                        <!-- كبسة الانتقال المباشر إلى موقع حمامات ماعين على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D8%AD%D9%85%D8%A7%D9%85%D8%A7%D8%AA+%D9%85%D8%A7%D8%B9%D9%8A%D9%86%E2%80%AD/@31.6094891,35.6207053,15z/data=!4m10!1m2!2m1!1z2K3Zhdin2YXYp9iqINmF2KfYudmK2YY!3m6!1s0x1503462a9b32f693:0x8bde7907a1dce411!8m2!3d31.6094333!4d35.6104306!15sChfYrdmF2KfZhdin2Kog2YXYp9i52YrZhloZIhfYrdmF2KfZhdin2Kog2YXYp9i52YrZhpIBEnRvdXJpc3RfYXR0cmFjdGlvbuABAA!16s%2Fm%2F047nn2z?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع حمامات ماعين على الخريطة
+</a>
+                    </div>
+                </div>
+                <div class="detail-card grid md:grid-cols-2 gap-12 bg-stone-50 p-10 rounded-3xl">
+          <img src="Discover Jordan/afra.jpeg" class="rounded-3xl h-96 object-cover" alt="حمامات عفرا">
+                    <div>
+                        <h3 class="text-3xl font-bold">حمامات عفرا</h3>
+                        <p class="text-lg mt-4">ينابيع كبريتية ساخنة تقع جنوب الأردن، وتشتهر بفوائدها العلاجية للمفاصل والجهاز التنفسي، إضافة إلى طبيعتها الهادئة وأجوائها الجبلية.</p>
+                        <p class="font-bold text-amber-700 mt-6">سعر التذكرة: 8–12 دينار</p>
+                                        <!-- كبسة الانتقال المباشر إلى موقع حمامات عفرا على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D8%AD%D9%85%D8%A7%D9%85%D8%A7%D8%AA+%D8%B9%D9%81%D8%B1%D8%A7%E2%80%AD/@30.9680827,35.6444778,17z/data=!3m1!4b1!4m6!3m5!1s0x150399e4b5f8abbd:0xd4f0bfbbe4f12c45!8m2!3d30.9680781!4d35.6419082!16s%2Fg%2F120x6xpw?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع حمامات عفرا على الخريطة
+</a>
+                    </div>
+                </div>
+                <div class="detail-card grid md:grid-cols-2 gap-12 bg-stone-50 p-10 rounded-3xl">
+             <img src="Discover Jordan/hema.jpg" class="rounded-3xl h-96 object-cover" alt="الحمة الأردنية">
+                    <div>
+                        <h3 class="text-3xl font-bold">حمامات الحمة الأردنية</h3>
+                        <p class="text-lg mt-4">من أشهر الينابيع المعدنية في شمال الأردن، وتتميز بالمياه الكبريتية الساخنة المفيدة لأمراض المفاصل والأعصاب وبعض مشاكل الجهاز التنفسي.</p>
+                        <p class="font-bold text-amber-700 mt-6">سعر التذكرة: 10–18 دينار</p>
+                                                                    <!-- كبسة الانتقال المباشر إلى موقع حمامات الحمة الأردنية على خرائط جوجل -->
+                 <br> <br>
+<a href="https://www.google.com/maps/place/%D8%A7%D9%84%D8%AD%D9%85%D8%A9+%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86%D9%8A%D8%A9%E2%80%AD/@32.7025017,35.6867721,16z/data=!3m1!4b1!4m6!3m5!1s0x151c6d29748c4f6f:0x291c8bb5757f6a0e!8m2!3d32.7035885!4d35.6798107!16s%2Fg%2F11fy12_c_m?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" 
+   class="inline-flex items-center gap-2 bg-amber-950 hover:bg-amber-900 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-md cursor-pointer">
+    <i class="fas fa-map-marker-alt text-amber-400"></i>
+    انتقل إلى موقع حمامات الحمة الأردنية على الخريطة
+</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT -->
+<section id="contact" class="py-24 bg-[#8B5A2B] text-white">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="title-font text-6xl font-bold mb-10">اتصل بنا</h2>
+    
+<p class="text-2xl">contacts@mota.gov.jo | ‏(06) 460 3360‏</p>
+
+    <!-- موقع الوزارة -->
+    <p class="text-xl text-amber-400 mb-10">
+      <a href="https://mota.gov.jo" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="hover:text-amber-500 underline">
+        🌐 موقع وزارة السياحة والآثار الرسمي
+      </a>
+    </p>
+
+    <!-- السوشيال ميديا -->
+    <div class="flex justify-center gap-8 mt-8 text-3xl">
+      <a href="https://www.instagram.com/mota.jordan" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/mota.jordan" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://x.com/MOTA_Jordan" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+    </div>
+  </div>
+</section>
+        </div>
+    </section>
+<script>
+    const navHeight = 90;
+    // Smooth Scroll لكل الروابط في النافبار
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            
+            // إذا كان الرابط للـ Home، خليه يروح لأعلى الصفحة
+            if (targetId === '#home') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+            
+            if (target) {
+                // نرجع قسم "ليش الأردن" ظاهر قبل ما نروح له
+                if (targetId === '#why') {
+                    document.querySelectorAll('.section').forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    document.getElementById('why').style.display = 'block';
+                }
+
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - navHeight;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // دالة عرض التصنيفات (سياحة دينية، ثقافية، علاجية)
+    window.showCategory = function(n) {
+        // إخفاء قسم "ليش الأردن"
+        document.getElementById('why').style.display = 'none';
+
+        // إخفاء كل الأقسام الأخرى
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+        });
+
+        let target;
+        if (n === 1) target = document.getElementById('religious');
+        if (n === 2) target = document.getElementById('cultural');
+        if (n === 3) target = document.getElementById('therapeutic');
+
+        if (target) {
+            target.classList.add('active');
+            
+            // التمرير بعد ظهور القسم
+            setTimeout(() => {
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - navHeight;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 50);
+        }
+    };
+
+    // دالة العودة
+    window.backToWhy = function() {
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+        });
+
+        const whySection = document.getElementById('why');
+        whySection.style.display = 'block';
+
+        setTimeout(() => {
+            const elementPosition = whySection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - navHeight;
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }, 100);
+    };
+</script>
+</body>
+</html>
