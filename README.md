@@ -1,3 +1,5 @@
+<img width="1364" height="768" alt="image" src="https://github.com/user-attachments/assets/3285dc96-8e45-44b4-a876-7c62ba1caf9a" />
+
 # Discover Jordan
 Discover Jordan is a responsive tourism website built using HTML, CSS and JavaScript.
 
